@@ -17,7 +17,8 @@ import signal
 from itertools import ifilter
 
 
-READ_LINE_BUF = 256
+READ_LINE_BUF = 1024
+WRITE_BUF = 2 * 1024 * 1024
 
 MAIN_SECTION = "Main"
 TIMEOUT_KEY = "timeout"
@@ -245,14 +246,24 @@ def verify_conn(con):
 
 
 def send_file(con, filename):
+    chunks = []
+    inbuf = 0
     f = open(filename)
     while True:
         message = f.readline()
         if not message:
             break
-        message = "put " + message
-        con.sendall(message)
+        chunk = "put " + message
+        inbuf += len(chunk)
+        chunks += [chunk]
+        if inbuf > WRITE_BUF:
+            LOG.debug('flushing %d lines' % (len(chunks)))
+            con.sendall(''.join(chunks))
+            chunks, inbuf = ([], 0)
     f.close()
+    if len(chunks) > 0:
+        LOG.debug('flushing %d lines' % (len(chunks)))
+        con.sendall(''.join(chunks))
     os.unlink(filename)
 
 
