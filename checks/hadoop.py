@@ -1,12 +1,28 @@
 #!/usr/bin/env python
 import ConfigParser
 import json
+import string
 import sys
 import os.path
 import urllib2
 import re
 from string import split, join
 import itertools
+import time
+
+#!/usr/bin/python
+# This file is part of tcollector.
+# Copyright (C) 2012  Yandex, Inc.
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.  This program is distributed in the hope that it
+# will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+# of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
+# General Public License for more details.  You should have received a copy
+# of the GNU Lesser General Public License along with this program.  If not,
+# see <http://www.gnu.org/licenses/>.
 
 DEFAULT_TIMEOUT = 30
 
@@ -171,29 +187,35 @@ class HBaseRegionServer(JmxParser):
                     yield 'hbase.regionserver.' + attr, tags, str(value)
 
 
-def fetch_metrics(config, section, clz):
+def format_tags(tags):
+    return string.join(map(
+        lambda (tag, tagv): "%s=%s" % (tag, tagv),
+        tags.items()), ' ')
+
+def print_metrics(config, ts, section, clz):
     metrics = list(clz(config.get(section, 'url'), config).get_metrics())
-    metrics.sort(key=lambda (x, y, z): x)
-    print(join(
-        map(lambda (x, y, z): str((x, y, z)), metrics), '\n'))
+    lines = map(lambda (metric, tags, value): "%s %s %d %s" % (metric, value, ts, format_tags(tags)), metrics)
+    lines.sort()
+    for line in lines:
+        print line
 
 
 def main(argv):
     """The main entry point and loop."""
 
     confpath = argv[1] + "/hadoop.conf"
-    print('Using %s config' % confpath)
     if not os.path.exists(confpath):
         return 0
     config = ConfigParser.SafeConfigParser()
     config.read(confpath)
+    ts = int(time.time())
 
     for sec, clz in {'Namenode' : HDFSNameNode,
                      'Datanode' : HDFSDataNode,
                      'HBaseRegionServer' : HBaseRegionServer
     }.iteritems():
         if config.has_section(sec):
-            fetch_metrics(config, sec, clz)
+            print_metrics(config, ts, sec, clz)
 
 
 def get_or_default(config, section, key, default_value):
