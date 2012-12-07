@@ -27,7 +27,7 @@ import time
 
 DEFAULT_TIMEOUT = 30
 
-class Bean:
+class Bean(object):
     def __init__(self, bean):
         (sys, sub_name) = split(bean['name'], ':', 1)
         tags = map(lambda t: (t[0], t[1]),
@@ -39,7 +39,7 @@ class Bean:
     def __str__(self):
         return self.bean['name'] + ":" + self.sys + "," + str(self.tags)
 
-class JmxParser:
+class JmxParser(object):
     def __init__(self, url, conf):
         self.url = url
         self.conf = conf
@@ -60,14 +60,29 @@ class JmxParser:
         for (attr, v) in bean.iteritems():
             for attr_regex in regexps:
                 if re.match(attr_regex, attr):
-                    yield (attr, v)
+                    yield attr, v
 
     def filter_attrs(self, bean, attr_regexps):
         for (attr, value) in bean.bean.iteritems():
             for regex in attr_regexps:
                 if re.match(regex, attr):
-                    yield (attr.encode('latin'), value)
+                    yield attr.encode('latin'), value
 
+    def get_jvm_metrics(self, tags):
+        for bean in self.find_beans('java.lang', type='^Memory$'):
+            for t, v in bean.bean['HeapMemoryUsage'].iteritems():
+                ltags = dict(tags)
+                ltags['type'] = t
+                yield 'jvm.memory.heap', ltags, str(v)
+            for t, v in bean.bean['NonHeapMemoryUsage'].iteritems():
+                ltags = dict(tags)
+                ltags['type'] = t
+                yield 'jvm.memory.non-heap', ltags, str(v)
+        for bean in self.find_beans('java.lang', type='^GarbageCollector$'):
+            ltags = dict(tags)
+            ltags['name'] = bean.bean['Name'].replace(' ','')
+            yield 'jvm.memory.gc.count', ltags, str(bean.bean['CollectionCount'])
+            yield 'jvm.memory.gc.time', ltags, str(bean.bean['CollectionTime'])
 
 class HDFSNameNode(JmxParser):
 
@@ -82,6 +97,8 @@ class HDFSNameNode(JmxParser):
     ] }
 
     def get_metrics(self):
+        for m in self.get_jvm_metrics({'process' : 'NameNode'}):
+            yield m
         for (name, attr_regexps) in self.what.iteritems():
             for bean in self.find_beans('Hadoop', service='NameNode', name=name):
                 for (attr, value) in self.filter_attrs(bean, attr_regexps):
@@ -131,6 +148,8 @@ class HDFSDataNode(JmxParser):
     ] }
 
     def get_metrics(self):
+        for m in self.get_jvm_metrics({'process' : 'DataNode'}):
+            yield m
         for (name, attr_regexps) in self.what.iteritems():
             for bean in self.find_beans('Hadoop', service='DataNode', name=name):
                 for (attr, value) in self.filter_attrs(bean, attr_regexps):
@@ -163,6 +182,8 @@ class HBaseRegionServer(JmxParser):
     what = { 'RegionServerStatistics': ['.*'] }
 
     def get_metrics(self):
+        for m in self.get_jvm_metrics({'process' : 'HRegionServer'}):
+            yield m
         for (name, attr_regexps) in self.what.iteritems():
             for bean in self.find_beans('hadoop', service='RegionServer', name=name):
                 for (attr, value) in self.filter_attrs(bean, attr_regexps):
@@ -190,6 +211,8 @@ class HBaseRegionServer(JmxParser):
 class JobTracker(JmxParser):
 
     def get_metrics(self):
+        for m in self.get_jvm_metrics({'process' : 'JobTracker'}):
+            yield m
         for bean in self.find_beans('hadoop', service='JobTracker', name='JobTrackerInfo'):
             strio = StringIO.StringIO(bean.bean['SummaryJson'])
             for attr, value in json.load(strio).iteritems():
@@ -211,6 +234,8 @@ class JobTracker(JmxParser):
 class TaskTracker(JmxParser):
 
     def get_metrics(self):
+        for m in self.get_jvm_metrics({'process' : 'TaskTracker'}):
+            yield m
         for bean in self.find_beans('hadoop', service='TaskTracker', name='TaskTrackerInfo'):
             strio = StringIO.StringIO(bean.bean['TasksInfoJson'])
             for attr, value in json.load(strio).iteritems():
