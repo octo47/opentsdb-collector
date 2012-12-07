@@ -1,0 +1,729 @@
+{
+  "beans" : [ {
+    "name" : "java.lang:type=MemoryPool,name=PS Eden Space",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Eden Space",
+    "Type" : "HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 17039360,
+      "init" : 197787648,
+      "max" : 4193255424,
+      "used" : 0
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep", "PS Scavenge" ],
+    "PeakUsage" : {
+      "committed" : 3956801536,
+      "init" : 197787648,
+      "max" : 4194107392,
+      "used" : 3956801536
+    },
+    "Usage" : {
+      "committed" : 17039360,
+      "init" : 197787648,
+      "max" : 4193255424,
+      "used" : 7166448
+    },
+    "CollectionUsageThresholdExceeded" : true,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdSupported" : false
+  }, {
+    "name" : "java.lang:type=Memory",
+    "modelerType" : "sun.management.MemoryImpl",
+    "Verbose" : false,
+    "HeapMemoryUsage" : {
+      "committed" : 2018508800,
+      "init" : 791281152,
+      "max" : 11184832512,
+      "used" : 1688182840
+    },
+    "NonHeapMemoryUsage" : {
+      "committed" : 46530560,
+      "init" : 24313856,
+      "max" : 136314880,
+      "used" : 45992608
+    },
+    "ObjectPendingFinalizationCount" : 0
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=PS Survivor Space",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Survivor Space",
+    "Type" : "HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 524288,
+      "init" : 32964608,
+      "max" : 524288,
+      "used" : 360448
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep", "PS Scavenge" ],
+    "PeakUsage" : {
+      "committed" : 586153984,
+      "init" : 32964608,
+      "max" : 586153984,
+      "used" : 463694256
+    },
+    "Usage" : {
+      "committed" : 524288,
+      "init" : 32964608,
+      "max" : 524288,
+      "used" : 360448
+    },
+    "CollectionUsageThresholdExceeded" : true,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdSupported" : false
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=Code Cache",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "Code Cache",
+    "Type" : "NON_HEAP",
+    "Valid" : true,
+    "CollectionUsage" : null,
+    "MemoryManagerNames" : [ "CodeCacheManager" ],
+    "PeakUsage" : {
+      "committed" : 10223616,
+      "init" : 2555904,
+      "max" : 50331648,
+      "used" : 10039296
+    },
+    "Usage" : {
+      "committed" : 10223616,
+      "init" : 2555904,
+      "max" : 50331648,
+      "used" : 10033920
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdSupported" : false,
+    "UsageThresholdExceeded" : true,
+    "UsageThresholdSupported" : true
+  }, {
+    "name" : "java.lang:type=GarbageCollector,name=PS MarkSweep",
+    "modelerType" : "sun.management.GarbageCollectorImpl",
+    "LastGcInfo" : {
+      "GcThreadCount" : 18,
+      "duration" : 5924,
+      "endTime" : 4748587656,
+      "id" : 896,
+      "memoryUsageAfterGc" : [ {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 851968,
+          "init" : 32964608,
+          "max" : 851968,
+          "used" : 0
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 2000945152,
+          "init" : 527564800,
+          "max" : 8388608000,
+          "used" : 1503640392
+        }
+      }, {
+        "key" : "PS Perm Gen",
+        "value" : {
+          "committed" : 36306944,
+          "init" : 21757952,
+          "max" : 85983232,
+          "used" : 35958536
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 10223616,
+          "init" : 2555904,
+          "max" : 50331648,
+          "used" : 10033920
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 60817408,
+          "init" : 197787648,
+          "max" : 4187488256,
+          "used" : 0
+        }
+      } ],
+      "memoryUsageBeforeGc" : [ {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 851968,
+          "init" : 32964608,
+          "max" : 851968,
+          "used" : 835616
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 2195652608,
+          "init" : 527564800,
+          "max" : 8388608000,
+          "used" : 2193117048
+        }
+      }, {
+        "key" : "PS Perm Gen",
+        "value" : {
+          "committed" : 36372480,
+          "init" : 21757952,
+          "max" : 85983232,
+          "used" : 36020496
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 10223616,
+          "init" : 2555904,
+          "max" : 50331648,
+          "used" : 10033920
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 60817408,
+          "init" : 197787648,
+          "max" : 4187488256,
+          "used" : 0
+        }
+      } ],
+      "startTime" : 4748581732
+    },
+    "CollectionCount" : 896,
+    "CollectionTime" : 2668586,
+    "Name" : "PS MarkSweep",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "PS Eden Space", "PS Survivor Space", "PS Old Gen", "PS Perm Gen" ]
+  }, {
+    "name" : "java.lang:type=Runtime",
+    "modelerType" : "sun.management.RuntimeImpl",
+    "Name" : "23898@w301.test.yandex.net",
+    "ClassPath" : "/etc/hadoop/conf.tobago:/usr/lib/jvm/default-java/lib/tools.jar:/usr/lib/hadoop-0.20-mapreduce:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-api-2.1.jar:/etc/hadoop/conf.tobago:/usr/lib/hadoop/lib/slf4j-log4j12-1.6.1.jar:/usr/lib/hadoop/lib/zookeeper-3.4.3-cdh4.1.0.jar:/usr/lib/hadoop/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop/lib/jettison-1.1.jar:/usr/lib/hadoop/lib/jsch-0.1.42.jar:/usr/lib/hadoop/lib/jersey-core-1.8.jar:/usr/lib/hadoop/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop/lib/servlet-api-2.5.jar:/usr/lib/hadoop/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop/lib/commons-lang-2.5.jar:/usr/lib/hadoop/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop/lib/activation-1.1.jar:/usr/lib/hadoop/lib/commons-io-2.1.jar:/usr/lib/hadoop/lib/paranamer-2.3.jar:/usr/lib/hadoop/lib/commons-configuration-1.6.jar:/usr/lib/hadoop/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop/lib/guava-11.0.2.jar:/usr/lib/hadoop/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop/lib/commons-el-1.0.jar:/usr/lib/hadoop/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop/lib/commons-math-2.1.jar:/usr/lib/hadoop/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop/lib/asm-3.2.jar:/usr/lib/hadoop/lib/commons-codec-1.4.jar:/usr/lib/hadoop/lib/commons-cli-1.2.jar:/usr/lib/hadoop/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop/lib/log4j-1.2.17.jar:/usr/lib/hadoop/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop/lib/jline-0.9.94.jar:/usr/lib/hadoop/lib/jsr305-1.3.9.jar:/usr/lib/hadoop/lib/jets3t-0.6.1.jar:/usr/lib/hadoop/lib/jersey-json-1.8.jar:/usr/lib/hadoop/lib/stax-api-1.0.1.jar:/usr/lib/hadoop/lib/jsp-api-2.1.jar:/usr/lib/hadoop/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop/lib/kfs-0.3.jar:/usr/lib/hadoop/lib/junit-4.8.2.jar:/usr/lib/hadoop/lib/commons-digester-1.8.jar:/usr/lib/hadoop/lib/xmlenc-0.52.jar:/usr/lib/hadoop/lib/jersey-server-1.8.jar:/usr/lib/hadoop/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop/lib/commons-net-3.1.jar:/usr/lib/hadoop/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop/.//hadoop-annotations.jar:/usr/lib/hadoop/.//hadoop-common.jar:/usr/lib/hadoop/.//hadoop-auth.jar:/usr/lib/hadoop/.//hadoop-common-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop/.//hadoop-annotations-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop/.//hadoop-common-2.0.0-cdh4.1.0-tests.jar:/usr/lib/hadoop/.//hadoop-auth-2.0.0-cdh4.1.0.jar:::/usr/lib/hadoop-hdfs/./:/usr/lib/hadoop-hdfs/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-hdfs/lib/jersey-core-1.8.jar:/usr/lib/hadoop-hdfs/lib/servlet-api-2.5.jar:/usr/lib/hadoop-hdfs/lib/commons-lang-2.5.jar:/usr/lib/hadoop-hdfs/lib/commons-io-2.1.jar:/usr/lib/hadoop-hdfs/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-hdfs/lib/guava-11.0.2.jar:/usr/lib/hadoop-hdfs/lib/commons-daemon-1.0.3.jar:/usr/lib/hadoop-hdfs/lib/commons-el-1.0.jar:/usr/lib/hadoop-hdfs/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-hdfs/lib/asm-3.2.jar:/usr/lib/hadoop-hdfs/lib/commons-codec-1.4.jar:/usr/lib/hadoop-hdfs/lib/commons-cli-1.2.jar:/usr/lib/hadoop-hdfs/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-hdfs/lib/log4j-1.2.17.jar:/usr/lib/hadoop-hdfs/lib/jline-0.9.94.jar:/usr/lib/hadoop-hdfs/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-hdfs/lib/jsp-api-2.1.jar:/usr/lib/hadoop-hdfs/lib/xmlenc-0.52.jar:/usr/lib/hadoop-hdfs/lib/jersey-server-1.8.jar:/usr/lib/hadoop-hdfs/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-hdfs/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-hdfs/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-hdfs/lib/zookeeper-3.4.3-cdh4.1.0.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs-2.0.0-cdh4.1.0-tests.jar:/usr/lib/hadoop-yarn/lib/guice-3.0.jar:/usr/lib/hadoop-yarn/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-yarn/lib/guice-servlet-3.0.jar:/usr/lib/hadoop-yarn/lib/jersey-core-1.8.jar:/usr/lib/hadoop-yarn/lib/jersey-guice-1.8.jar:/usr/lib/hadoop-yarn/lib/commons-io-2.1.jar:/usr/lib/hadoop-yarn/lib/paranamer-2.3.jar:/usr/lib/hadoop-yarn/lib/aopalliance-1.0.jar:/usr/lib/hadoop-yarn/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-yarn/lib/netty-3.2.4.Final.jar:/usr/lib/hadoop-yarn/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-yarn/lib/asm-3.2.jar:/usr/lib/hadoop-yarn/lib/log4j-1.2.17.jar:/usr/lib/hadoop-yarn/lib/javax.inject-1.jar:/usr/lib/hadoop-yarn/lib/jersey-server-1.8.jar:/usr/lib/hadoop-yarn/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-yarn/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-tests.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-nodemanager.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-site.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-common.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-web-proxy.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-common.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-applications-distributedshell.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-api.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-resourcemanager.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-tests-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-common-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-resourcemanager-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-common-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-api-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-applications-distributedshell-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-tests-2.0.0-cdh4.1.0-tests.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-web-proxy-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-site-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-nodemanager-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/./:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-streaming.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-examples.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-examples.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-test.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-ant.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-core.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-test.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-tools.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-core.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-ant.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-tools.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-ant-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-core-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-tools-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-examples-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-test-2.0.0-mr1-cdh4.1.0.jar::",
+    "BootClassPath" : "/usr/local/jdk1.6.0_30/jre/lib/resources.jar:/usr/local/jdk1.6.0_30/jre/lib/rt.jar:/usr/local/jdk1.6.0_30/jre/lib/sunrsasign.jar:/usr/local/jdk1.6.0_30/jre/lib/jsse.jar:/usr/local/jdk1.6.0_30/jre/lib/jce.jar:/usr/local/jdk1.6.0_30/jre/lib/charsets.jar:/usr/local/jdk1.6.0_30/jre/lib/modules/jdk.boot.jar:/usr/local/jdk1.6.0_30/jre/classes",
+    "LibraryPath" : "/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-amd64-64",
+    "VmName" : "Java HotSpot(TM) 64-Bit Server VM",
+    "VmVendor" : "Sun Microsystems Inc.",
+    "VmVersion" : "20.5-b03",
+    "BootClassPathSupported" : true,
+    "InputArguments" : [ "-Dproc_jobtracker", "-Xmx1000m", "-Djava.net.preferIPv4Stack=true", "-Dcom.sun.management.jmxremote", "-Dcom.sun.management.jmxremote.port=8008", "-Djava.rmi.server.hostname=192.168.169.11", "-Dcom.sun.management.jmxremote.authenticate=false", "-Dcom.sun.management.jmxremote.ssl=false", "-XX:+UseParallelGC", "-Xmx12000m", "-Dhadoop.log.dir=/local/hd3/hadoop/log", "-Dhadoop.log.file=hadoop-hdfs-jobtracker-w301hdpyandexnet.log", "-Dhadoop.home.dir=/usr/lib/hadoop-0.20-mapreduce", "-Dhadoop.id.str=hdfs", "-Dhadoop.root.logger=INFO,DRFA", "-Djava.library.path=/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-amd64-64", "-Dhadoop.policy.file=hadoop-policy.xml" ],
+    "ManagementSpecVersion" : "1.2",
+    "SpecName" : "Java Virtual Machine Specification",
+    "SpecVendor" : "Sun Microsystems Inc.",
+    "SpecVersion" : "1.0",
+    "StartTime" : 1349962557875,
+    "SystemProperties" : [ {
+      "key" : "java.ext.dirs",
+      "value" : "/usr/local/jdk1.6.0_30/jre/lib/ext:/usr/java/packages/lib/ext"
+    }, {
+      "key" : "hadoop.home.dir",
+      "value" : "/usr/lib/hadoop-0.20-mapreduce"
+    }, {
+      "key" : "java.vm.specification.vendor",
+      "value" : "Sun Microsystems Inc."
+    }, {
+      "key" : "com.sun.management.jmxremote.port",
+      "value" : "8008"
+    }, {
+      "key" : "user.timezone",
+      "value" : "Europe/Moscow"
+    }, {
+      "key" : "hadoop.id.str",
+      "value" : "hdfs"
+    }, {
+      "key" : "java.vm.vendor",
+      "value" : "Sun Microsystems Inc."
+    }, {
+      "key" : "user.name",
+      "value" : "mapred"
+    }, {
+      "key" : "java.vm.specification.name",
+      "value" : "Java Virtual Machine Specification"
+    }, {
+      "key" : "user.dir",
+      "value" : "/usr/lib/hadoop-0.20-mapreduce"
+    }, {
+      "key" : "user.country",
+      "value" : "US"
+    }, {
+      "key" : "user.language",
+      "value" : "en"
+    }, {
+      "key" : "java.specification.version",
+      "value" : "1.6"
+    }, {
+      "key" : "hadoop.log.file",
+      "value" : "hadoop-hdfs-jobtracker-w301hdpyandexnet.log"
+    }, {
+      "key" : "hadoop.policy.file",
+      "value" : "hadoop-policy.xml"
+    }, {
+      "key" : "sun.cpu.endian",
+      "value" : "little"
+    }, {
+      "key" : "java.home",
+      "value" : "/usr/local/jdk1.6.0_30/jre"
+    }, {
+      "key" : "java.net.preferIPv4Stack",
+      "value" : "true"
+    }, {
+      "key" : "sun.jnu.encoding",
+      "value" : "ANSI_X3.4-1968"
+    }, {
+      "key" : "file.separator",
+      "value" : "/"
+    }, {
+      "key" : "java.vendor.url",
+      "value" : "http://java.sun.com/"
+    }, {
+      "key" : "java.awt.graphicsenv",
+      "value" : "sun.awt.X11GraphicsEnvironment"
+    }, {
+      "key" : "hadoop.log.dir",
+      "value" : "/local/hd3/hadoop/log"
+    }, {
+      "key" : "os.arch",
+      "value" : "amd64"
+    }, {
+      "key" : "com.sun.management.jmxremote.authenticate",
+      "value" : "false"
+    }, {
+      "key" : "proc_jobtracker",
+      "value" : ""
+    }, {
+      "key" : "java.io.tmpdir",
+      "value" : "/tmp"
+    }, {
+      "key" : "java.runtime.name",
+      "value" : "Java(TM) SE Runtime Environment"
+    }, {
+      "key" : "java.awt.printerjob",
+      "value" : "sun.print.PSPrinterJob"
+    }, {
+      "key" : "file.encoding",
+      "value" : "ANSI_X3.4-1968"
+    }, {
+      "key" : "java.version",
+      "value" : "1.6.0_30"
+    }, {
+      "key" : "java.vendor.url.bug",
+      "value" : "http://java.sun.com/cgi-bin/bugreport.cgi"
+    }, {
+      "key" : "java.vm.specification.version",
+      "value" : "1.0"
+    }, {
+      "key" : "file.encoding.pkg",
+      "value" : "sun.io"
+    }, {
+      "key" : "sun.java.command",
+      "value" : "org.apache.hadoop.mapred.JobTracker"
+    }, {
+      "key" : "sun.java.launcher",
+      "value" : "SUN_STANDARD"
+    }, {
+      "key" : "path.separator",
+      "value" : ":"
+    }, {
+      "key" : "java.runtime.version",
+      "value" : "1.6.0_30-b12"
+    }, {
+      "key" : "java.class.path",
+      "value" : "/etc/hadoop/conf.tobago:/usr/lib/jvm/default-java/lib/tools.jar:/usr/lib/hadoop-0.20-mapreduce:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-api-2.1.jar:/etc/hadoop/conf.tobago:/usr/lib/hadoop/lib/slf4j-log4j12-1.6.1.jar:/usr/lib/hadoop/lib/zookeeper-3.4.3-cdh4.1.0.jar:/usr/lib/hadoop/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop/lib/jettison-1.1.jar:/usr/lib/hadoop/lib/jsch-0.1.42.jar:/usr/lib/hadoop/lib/jersey-core-1.8.jar:/usr/lib/hadoop/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop/lib/servlet-api-2.5.jar:/usr/lib/hadoop/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop/lib/commons-lang-2.5.jar:/usr/lib/hadoop/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop/lib/activation-1.1.jar:/usr/lib/hadoop/lib/commons-io-2.1.jar:/usr/lib/hadoop/lib/paranamer-2.3.jar:/usr/lib/hadoop/lib/commons-configuration-1.6.jar:/usr/lib/hadoop/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop/lib/guava-11.0.2.jar:/usr/lib/hadoop/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop/lib/commons-el-1.0.jar:/usr/lib/hadoop/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop/lib/commons-math-2.1.jar:/usr/lib/hadoop/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop/lib/asm-3.2.jar:/usr/lib/hadoop/lib/commons-codec-1.4.jar:/usr/lib/hadoop/lib/commons-cli-1.2.jar:/usr/lib/hadoop/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop/lib/log4j-1.2.17.jar:/usr/lib/hadoop/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop/lib/jline-0.9.94.jar:/usr/lib/hadoop/lib/jsr305-1.3.9.jar:/usr/lib/hadoop/lib/jets3t-0.6.1.jar:/usr/lib/hadoop/lib/jersey-json-1.8.jar:/usr/lib/hadoop/lib/stax-api-1.0.1.jar:/usr/lib/hadoop/lib/jsp-api-2.1.jar:/usr/lib/hadoop/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop/lib/kfs-0.3.jar:/usr/lib/hadoop/lib/junit-4.8.2.jar:/usr/lib/hadoop/lib/commons-digester-1.8.jar:/usr/lib/hadoop/lib/xmlenc-0.52.jar:/usr/lib/hadoop/lib/jersey-server-1.8.jar:/usr/lib/hadoop/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop/lib/commons-net-3.1.jar:/usr/lib/hadoop/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop/.//hadoop-annotations.jar:/usr/lib/hadoop/.//hadoop-common.jar:/usr/lib/hadoop/.//hadoop-auth.jar:/usr/lib/hadoop/.//hadoop-common-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop/.//hadoop-annotations-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop/.//hadoop-common-2.0.0-cdh4.1.0-tests.jar:/usr/lib/hadoop/.//hadoop-auth-2.0.0-cdh4.1.0.jar:::/usr/lib/hadoop-hdfs/./:/usr/lib/hadoop-hdfs/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-hdfs/lib/jersey-core-1.8.jar:/usr/lib/hadoop-hdfs/lib/servlet-api-2.5.jar:/usr/lib/hadoop-hdfs/lib/commons-lang-2.5.jar:/usr/lib/hadoop-hdfs/lib/commons-io-2.1.jar:/usr/lib/hadoop-hdfs/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-hdfs/lib/guava-11.0.2.jar:/usr/lib/hadoop-hdfs/lib/commons-daemon-1.0.3.jar:/usr/lib/hadoop-hdfs/lib/commons-el-1.0.jar:/usr/lib/hadoop-hdfs/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-hdfs/lib/asm-3.2.jar:/usr/lib/hadoop-hdfs/lib/commons-codec-1.4.jar:/usr/lib/hadoop-hdfs/lib/commons-cli-1.2.jar:/usr/lib/hadoop-hdfs/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-hdfs/lib/log4j-1.2.17.jar:/usr/lib/hadoop-hdfs/lib/jline-0.9.94.jar:/usr/lib/hadoop-hdfs/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-hdfs/lib/jsp-api-2.1.jar:/usr/lib/hadoop-hdfs/lib/xmlenc-0.52.jar:/usr/lib/hadoop-hdfs/lib/jersey-server-1.8.jar:/usr/lib/hadoop-hdfs/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-hdfs/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-hdfs/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-hdfs/lib/zookeeper-3.4.3-cdh4.1.0.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs-2.0.0-cdh4.1.0-tests.jar:/usr/lib/hadoop-yarn/lib/guice-3.0.jar:/usr/lib/hadoop-yarn/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-yarn/lib/guice-servlet-3.0.jar:/usr/lib/hadoop-yarn/lib/jersey-core-1.8.jar:/usr/lib/hadoop-yarn/lib/jersey-guice-1.8.jar:/usr/lib/hadoop-yarn/lib/commons-io-2.1.jar:/usr/lib/hadoop-yarn/lib/paranamer-2.3.jar:/usr/lib/hadoop-yarn/lib/aopalliance-1.0.jar:/usr/lib/hadoop-yarn/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-yarn/lib/netty-3.2.4.Final.jar:/usr/lib/hadoop-yarn/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-yarn/lib/asm-3.2.jar:/usr/lib/hadoop-yarn/lib/log4j-1.2.17.jar:/usr/lib/hadoop-yarn/lib/javax.inject-1.jar:/usr/lib/hadoop-yarn/lib/jersey-server-1.8.jar:/usr/lib/hadoop-yarn/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-yarn/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-tests.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-nodemanager.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-site.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-common.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-web-proxy.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-common.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-applications-distributedshell.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-api.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-resourcemanager.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-tests-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-common-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-resourcemanager-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-common-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-api-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-applications-distributedshell-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-tests-2.0.0-cdh4.1.0-tests.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-web-proxy-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-site-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-yarn/.//hadoop-yarn-server-nodemanager-2.0.0-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/./:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.1.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-streaming.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-examples.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-examples.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-test.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-ant.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-core.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-test.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-tools.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-core.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-ant.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.1.0-tools.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-ant-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-core-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-tools-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-examples-2.0.0-mr1-cdh4.1.0.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-test-2.0.0-mr1-cdh4.1.0.jar::"
+    }, {
+      "key" : "os.name",
+      "value" : "Linux"
+    }, {
+      "key" : "com.sun.management.jmxremote.ssl",
+      "value" : "false"
+    }, {
+      "key" : "line.separator",
+      "value" : "\n"
+    }, {
+      "key" : "com.sun.management.jmxremote",
+      "value" : ""
+    }, {
+      "key" : "os.version",
+      "value" : "3.2.0-24-generic"
+    }, {
+      "key" : "sun.arch.data.model",
+      "value" : "64"
+    }, {
+      "key" : "java.class.version",
+      "value" : "50.0"
+    }, {
+      "key" : "java.rmi.server.hostname",
+      "value" : "192.168.169.11"
+    }, {
+      "key" : "sun.io.unicode.encoding",
+      "value" : "UnicodeLittle"
+    }, {
+      "key" : "java.vendor",
+      "value" : "Sun Microsystems Inc."
+    }, {
+      "key" : "sun.boot.class.path",
+      "value" : "/usr/local/jdk1.6.0_30/jre/lib/resources.jar:/usr/local/jdk1.6.0_30/jre/lib/rt.jar:/usr/local/jdk1.6.0_30/jre/lib/sunrsasign.jar:/usr/local/jdk1.6.0_30/jre/lib/jsse.jar:/usr/local/jdk1.6.0_30/jre/lib/jce.jar:/usr/local/jdk1.6.0_30/jre/lib/charsets.jar:/usr/local/jdk1.6.0_30/jre/lib/modules/jdk.boot.jar:/usr/local/jdk1.6.0_30/jre/classes"
+    }, {
+      "key" : "java.vm.info",
+      "value" : "mixed mode"
+    }, {
+      "key" : "java.specification.name",
+      "value" : "Java Platform API Specification"
+    }, {
+      "key" : "java.vm.name",
+      "value" : "Java HotSpot(TM) 64-Bit Server VM"
+    }, {
+      "key" : "java.vm.version",
+      "value" : "20.5-b03"
+    }, {
+      "key" : "sun.boot.library.path",
+      "value" : "/usr/local/jdk1.6.0_30/jre/lib/amd64"
+    }, {
+      "key" : "hadoop.root.logger",
+      "value" : "INFO,DRFA"
+    }, {
+      "key" : "java.endorsed.dirs",
+      "value" : "/usr/local/jdk1.6.0_30/jre/lib/endorsed"
+    }, {
+      "key" : "sun.os.patch.level",
+      "value" : "unknown"
+    }, {
+      "key" : "sun.cpu.isalist",
+      "value" : ""
+    }, {
+      "key" : "user.home",
+      "value" : "/var/run/hadoop"
+    }, {
+      "key" : "java.library.path",
+      "value" : "/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-amd64-64"
+    }, {
+      "key" : "java.specification.vendor",
+      "value" : "Sun Microsystems Inc."
+    }, {
+      "key" : "sun.management.compiler",
+      "value" : "HotSpot 64-Bit Tiered Compilers"
+    }, {
+      "key" : "java.rmi.server.randomIDs",
+      "value" : "true"
+    } ],
+    "Uptime" : 4819728380
+  }, {
+    "name" : "java.lang:type=ClassLoading",
+    "modelerType" : "sun.management.ClassLoadingImpl",
+    "LoadedClassCount" : 4213,
+    "UnloadedClassCount" : 182,
+    "TotalLoadedClassCount" : 4395,
+    "Verbose" : false
+  }, {
+    "name" : "java.lang:type=Threading",
+    "modelerType" : "sun.management.ThreadImpl",
+    "ThreadAllocatedMemoryEnabled" : true,
+    "ThreadAllocatedMemorySupported" : true,
+    "ThreadContentionMonitoringEnabled" : false,
+    "DaemonThreadCount" : 66,
+    "PeakThreadCount" : 208,
+    "CurrentThreadCpuTimeSupported" : true,
+    "ObjectMonitorUsageSupported" : true,
+    "SynchronizerUsageSupported" : true,
+    "ThreadContentionMonitoringSupported" : true,
+    "ThreadCpuTimeEnabled" : true,
+    "AllThreadIds" : [ 94313, 159, 141, 130, 121, 120, 94, 90, 89, 85, 84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 17, 19, 14, 35, 34, 33, 32, 28, 27, 24, 23, 21, 18, 16, 13, 11, 10, 9, 4, 3, 2, 1 ],
+    "CurrentThreadCpuTime" : 4280000000,
+    "CurrentThreadUserTime" : 3840000000,
+    "ThreadCount" : 81,
+    "TotalStartedThreadCount" : 94343,
+    "ThreadCpuTimeSupported" : true
+  }, {
+    "name" : "java.util.logging:type=Logging",
+    "modelerType" : "java.util.logging.Logging",
+    "LoggerNames" : [ "sun.rmi.client.call", "javax.management.remote.rmi", "sun.rmi.server.call", "sun.rmi.transport.tcp", "sun.rmi.transport.tcp.proxy", "javax.management", "javax.management.remote.misc", "sun.rmi.client.ref", "sun.awt.AppContext", "sun.rmi.dgc", "sun.rmi.transport.misc", "global", "sun.rmi.runtime", "sun.rmi.server.ref", "sun.management.jmxremote", "javax.management.mbeanserver", "" ]
+  }, {
+    "name" : "java.lang:type=Compilation",
+    "modelerType" : "sun.management.CompilationImpl",
+    "Name" : "HotSpot 64-Bit Tiered Compilers",
+    "CompilationTimeMonitoringSupported" : true,
+    "TotalCompilationTime" : 43847
+  }, {
+    "name" : "hadoop:service=JobTracker,name=JobTrackerInfo",
+    "modelerType" : "org.apache.hadoop.mapred.JobTracker",
+    "Version" : "2.0.0-mr1-cdh4.1.0, rUnknown",
+    "ThreadCount" : 81,
+    "Hostname" : "w301",
+    "ConfigVersion" : "default",
+    "SummaryJson" : "{\"nodes\":88,\"alive\":88,\"blacklisted\":0,\"slots\":{\"map_slots\":1760,\"map_slots_used\":0,\"reduce_slots\":1408,\"reduce_slots_used\":0},\"jobs\":4644}",
+    "AliveNodesInfoJson" : "[{\"hostname\":\"w342.test.yandex.net\",\"last_seen\":1354782285532,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":97,\"dir_failures\":0},{\"hostname\":\"w359.test.yandex.net\",\"last_seen\":1354782285428,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":118,\"dir_failures\":0},{\"hostname\":\"w340.test.yandex.net\",\"last_seen\":1354782285531,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":86,\"dir_failures\":0},{\"hostname\":\"w390.test.yandex.net\",\"last_seen\":1354782285913,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":61,\"dir_failures\":0},{\"hostname\":\"w316.test.yandex.net\",\"last_seen\":1354782285430,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":106,\"dir_failures\":0},{\"hostname\":\"w322.test.yandex.net\",\"last_seen\":1354782285468,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":86,\"dir_failures\":0},{\"hostname\":\"w387.test.yandex.net\",\"last_seen\":1354782285957,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":99,\"dir_failures\":0},{\"hostname\":\"w370.test.yandex.net\",\"last_seen\":1354782285548,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":69,\"dir_failures\":0},{\"hostname\":\"w349.test.yandex.net\",\"last_seen\":1354782286154,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":117,\"dir_failures\":0},{\"hostname\":\"w385.test.yandex.net\",\"last_seen\":1354782285473,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":68,\"dir_failures\":0},{\"hostname\":\"w321.test.yandex.net\",\"last_seen\":1354782286120,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":95,\"dir_failures\":0},{\"hostname\":\"w310.test.yandex.net\",\"last_seen\":1354782285673,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":211,\"dir_failures\":0},{\"hostname\":\"w335.test.yandex.net\",\"last_seen\":1354782286154,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":126,\"dir_failures\":0},{\"hostname\":\"w369.test.yandex.net\",\"last_seen\":1354782285932,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":82,\"dir_failures\":0},{\"hostname\":\"w320.test.yandex.net\",\"last_seen\":1354782286240,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":93,\"dir_failures\":0},{\"hostname\":\"w346.test.yandex.net\",\"last_seen\":1354782286059,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":82,\"dir_failures\":0},{\"hostname\":\"w382.test.yandex.net\",\"last_seen\":1354782285474,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":92,\"dir_failures\":0},{\"hostname\":\"w312.test.yandex.net\",\"last_seen\":1354782285699,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":117,\"dir_failures\":0},{\"hostname\":\"w350.test.yandex.net\",\"last_seen\":1354782285472,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":50,\"dir_failures\":0},{\"hostname\":\"w304.test.yandex.net\",\"last_seen\":1354782286151,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":117,\"dir_failures\":0},{\"hostname\":\"w329.test.yandex.net\",\"last_seen\":1354782285974,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":81,\"dir_failures\":0},{\"hostname\":\"w383.test.yandex.net\",\"last_seen\":1354782285511,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":89,\"dir_failures\":0},{\"hostname\":\"w318.test.yandex.net\",\"last_seen\":1354782285595,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":109,\"dir_failures\":0},{\"hostname\":\"w327.test.yandex.net\",\"last_seen\":1354782285465,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":106,\"dir_failures\":0},{\"hostname\":\"w344.test.yandex.net\",\"last_seen\":1354782285448,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":71,\"dir_failures\":0},{\"hostname\":\"w332.test.yandex.net\",\"last_seen\":1354782285496,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":91,\"dir_failures\":0},{\"hostname\":\"w338.test.yandex.net\",\"last_seen\":1354782285838,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":116,\"dir_failures\":0},{\"hostname\":\"w334.test.yandex.net\",\"last_seen\":1354782285445,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":101,\"dir_failures\":0},{\"hostname\":\"w366.test.yandex.net\",\"last_seen\":1354782285455,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":99,\"dir_failures\":0},{\"hostname\":\"w326.test.yandex.net\",\"last_seen\":1354782286212,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":65,\"dir_failures\":0},{\"hostname\":\"w331.test.yandex.net\",\"last_seen\":1354782286116,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":101,\"dir_failures\":0},{\"hostname\":\"w341.test.yandex.net\",\"last_seen\":1354782285955,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":79,\"dir_failures\":0},{\"hostname\":\"w313.test.yandex.net\",\"last_seen\":1354782285675,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":95,\"dir_failures\":0},{\"hostname\":\"w328.test.yandex.net\",\"last_seen\":1354782285553,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":101,\"dir_failures\":0},{\"hostname\":\"w363.test.yandex.net\",\"last_seen\":1354782285718,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":121,\"dir_failures\":0},{\"hostname\":\"w378.test.yandex.net\",\"last_seen\":1354782285549,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":69,\"dir_failures\":0},{\"hostname\":\"w384.test.yandex.net\",\"last_seen\":1354782286164,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":136,\"dir_failures\":0},{\"hostname\":\"w368.test.yandex.net\",\"last_seen\":1354782286014,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":93,\"dir_failures\":0},{\"hostname\":\"w315.test.yandex.net\",\"last_seen\":1354782286049,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":94,\"dir_failures\":0},{\"hostname\":\"w357.test.yandex.net\",\"last_seen\":1354782285637,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":88,\"dir_failures\":0},{\"hostname\":\"w381.test.yandex.net\",\"last_seen\":1354782285869,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":81,\"dir_failures\":0},{\"hostname\":\"w307.test.yandex.net\",\"last_seen\":1354782286164,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":110,\"dir_failures\":0},{\"hostname\":\"w371.test.yandex.net\",\"last_seen\":1354782285571,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":141,\"dir_failures\":0},{\"hostname\":\"w367.test.yandex.net\",\"last_seen\":1354782285997,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":93,\"dir_failures\":0},{\"hostname\":\"w356.test.yandex.net\",\"last_seen\":1354782285549,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":75,\"dir_failures\":0},{\"hostname\":\"w303.test.yandex.net\",\"last_seen\":1354782285672,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":98,\"dir_failures\":0},{\"hostname\":\"w319.test.yandex.net\",\"last_seen\":1354782285389,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":102,\"dir_failures\":0},{\"hostname\":\"w317.test.yandex.net\",\"last_seen\":1354782285884,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":74,\"dir_failures\":0},{\"hostname\":\"w347.test.yandex.net\",\"last_seen\":1354782285893,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":102,\"dir_failures\":0},{\"hostname\":\"w362.test.yandex.net\",\"last_seen\":1354782285725,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":102,\"dir_failures\":0},{\"hostname\":\"w374.test.yandex.net\",\"last_seen\":1354782285416,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":84,\"dir_failures\":0},{\"hostname\":\"w345.test.yandex.net\",\"last_seen\":1354782285940,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":88,\"dir_failures\":0},{\"hostname\":\"w323.test.yandex.net\",\"last_seen\":1354782286064,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":78,\"dir_failures\":0},{\"hostname\":\"w376.test.yandex.net\",\"last_seen\":1354782285621,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":101,\"dir_failures\":0},{\"hostname\":\"w373.test.yandex.net\",\"last_seen\":1354782286137,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":74,\"dir_failures\":0},{\"hostname\":\"w365.test.yandex.net\",\"last_seen\":1354782285567,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":114,\"dir_failures\":0},{\"hostname\":\"w339.test.yandex.net\",\"last_seen\":1354782285533,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":93,\"dir_failures\":0},{\"hostname\":\"w352.test.yandex.net\",\"last_seen\":1354782285586,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":110,\"dir_failures\":0},{\"hostname\":\"w308.test.yandex.net\",\"last_seen\":1354782285786,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":107,\"dir_failures\":0},{\"hostname\":\"w311.test.yandex.net\",\"last_seen\":1354782285656,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":91,\"dir_failures\":0},{\"hostname\":\"w361.test.yandex.net\",\"last_seen\":1354782286152,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":113,\"dir_failures\":0},{\"hostname\":\"w348.test.yandex.net\",\"last_seen\":1354782285460,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":69,\"dir_failures\":0},{\"hostname\":\"w336.test.yandex.net\",\"last_seen\":1354782285430,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":115,\"dir_failures\":0},{\"hostname\":\"w325.test.yandex.net\",\"last_seen\":1354782285961,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":98,\"dir_failures\":0},{\"hostname\":\"w386.test.yandex.net\",\"last_seen\":1354782285711,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":83,\"dir_failures\":0},{\"hostname\":\"w364.test.yandex.net\",\"last_seen\":1354782285473,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":100,\"dir_failures\":0},{\"hostname\":\"w379.test.yandex.net\",\"last_seen\":1354782285700,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":68,\"dir_failures\":0},{\"hostname\":\"w324.test.yandex.net\",\"last_seen\":1354782285420,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":69,\"dir_failures\":0},{\"hostname\":\"w375.test.yandex.net\",\"last_seen\":1354782285890,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":111,\"dir_failures\":0},{\"hostname\":\"w353.test.yandex.net\",\"last_seen\":1354782285938,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":58,\"dir_failures\":0},{\"hostname\":\"w389.test.yandex.net\",\"last_seen\":1354782285961,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":80,\"dir_failures\":0},{\"hostname\":\"w333.test.yandex.net\",\"last_seen\":1354782285853,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":115,\"dir_failures\":0},{\"hostname\":\"w305.test.yandex.net\",\"last_seen\":1354782285698,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":98,\"dir_failures\":0},{\"hostname\":\"w372.test.yandex.net\",\"last_seen\":1354782286227,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":97,\"dir_failures\":0},{\"hostname\":\"w354.test.yandex.net\",\"last_seen\":1354782285781,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":105,\"dir_failures\":0},{\"hostname\":\"w377.test.yandex.net\",\"last_seen\":1354782285616,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":104,\"dir_failures\":0},{\"hostname\":\"w302.test.yandex.net\",\"last_seen\":1354782285457,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":67,\"dir_failures\":0},{\"hostname\":\"w388.test.yandex.net\",\"last_seen\":1354782285515,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":88,\"dir_failures\":0},{\"hostname\":\"w330.test.yandex.net\",\"last_seen\":1354782285783,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":80,\"dir_failures\":0},{\"hostname\":\"w351.test.yandex.net\",\"last_seen\":1354782285741,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":102,\"dir_failures\":0},{\"hostname\":\"w343.test.yandex.net\",\"last_seen\":1354782285468,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":60,\"dir_failures\":0},{\"hostname\":\"w355.test.yandex.net\",\"last_seen\":1354782285472,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":72,\"dir_failures\":0},{\"hostname\":\"w306.test.yandex.net\",\"last_seen\":1354782285605,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":84,\"dir_failures\":0},{\"hostname\":\"w309.test.yandex.net\",\"last_seen\":1354782286171,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":138,\"dir_failures\":0},{\"hostname\":\"w358.test.yandex.net\",\"last_seen\":1354782285670,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":76,\"dir_failures\":0},{\"hostname\":\"w314.test.yandex.net\",\"last_seen\":1354782285897,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":127,\"dir_failures\":0},{\"hostname\":\"w360.test.yandex.net\",\"last_seen\":1354782285720,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":114,\"dir_failures\":0},{\"hostname\":\"w337.test.yandex.net\",\"last_seen\":1354782285887,\"health\":\"OK\",\"slots\":{\"map_slots\":20,\"map_slots_used\":0,\"reduce_slots\":16,\"reduce_slots_used\":0},\"failures\":136,\"dir_failures\":0}]",
+    "BlacklistedNodesInfoJson" : "[]",
+    "QueueInfoJson" : "{\"default\":{\"info\":\"N/A\"},\"downloads\":{\"info\":\"N/A\"}}"
+  }, {
+    "name" : "com.sun.management:type=HotSpotDiagnostic",
+    "modelerType" : "sun.management.HotSpotDiagnostic",
+    "DiagnosticOptions" : [ {
+      "name" : "HeapDumpBeforeFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "HeapDumpAfterFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "HeapDumpOnOutOfMemoryError",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "HeapDumpPath",
+      "origin" : "DEFAULT",
+      "value" : "",
+      "writeable" : true
+    }, {
+      "name" : "CMSAbortablePrecleanWaitMillis",
+      "origin" : "DEFAULT",
+      "value" : "100",
+      "writeable" : true
+    }, {
+      "name" : "CMSWaitDuration",
+      "origin" : "DEFAULT",
+      "value" : "2000",
+      "writeable" : true
+    }, {
+      "name" : "PrintGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCDetails",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCDateStamps",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintGCTimeStamps",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintClassHistogramBeforeFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintClassHistogramAfterFullGC",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintClassHistogram",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    }, {
+      "name" : "PrintConcurrentLocks",
+      "origin" : "DEFAULT",
+      "value" : "false",
+      "writeable" : true
+    } ]
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=PS Perm Gen",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Perm Gen",
+    "Type" : "NON_HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 36306944,
+      "init" : 21757952,
+      "max" : 85983232,
+      "used" : 35958536
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep" ],
+    "PeakUsage" : {
+      "committed" : 73662464,
+      "init" : 21757952,
+      "max" : 85983232,
+      "used" : 36020496
+    },
+    "Usage" : {
+      "committed" : 36306944,
+      "init" : 21757952,
+      "max" : 85983232,
+      "used" : 35958688
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdExceeded" : true,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdExceeded" : true,
+    "UsageThresholdSupported" : true
+  }, {
+    "name" : "java.lang:type=OperatingSystem",
+    "modelerType" : "com.sun.management.UnixOperatingSystem",
+    "MaxFileDescriptorCount" : 65535,
+    "OpenFileDescriptorCount" : 386,
+    "CommittedVirtualMemorySize" : 13531758592,
+    "FreePhysicalMemorySize" : 5305950208,
+    "FreeSwapSpaceSize" : 0,
+    "ProcessCpuTime" : 259078380000000,
+    "TotalPhysicalMemorySize" : 50641993728,
+    "TotalSwapSpaceSize" : 0,
+    "Name" : "Linux",
+    "AvailableProcessors" : 24,
+    "Arch" : "amd64",
+    "SystemLoadAverage" : 0.55,
+    "Version" : "3.2.0-24-generic"
+  }, {
+    "name" : "java.lang:type=GarbageCollector,name=PS Scavenge",
+    "modelerType" : "sun.management.GarbageCollectorImpl",
+    "LastGcInfo" : {
+      "GcThreadCount" : 18,
+      "duration" : 12,
+      "endTime" : 4819722986,
+      "id" : 1057986,
+      "memoryUsageAfterGc" : [ {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 524288,
+          "init" : 32964608,
+          "max" : 524288,
+          "used" : 360448
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 2000945152,
+          "init" : 527564800,
+          "max" : 8388608000,
+          "used" : 1680642280
+        }
+      }, {
+        "key" : "PS Perm Gen",
+        "value" : {
+          "committed" : 36306944,
+          "init" : 21757952,
+          "max" : 85983232,
+          "used" : 35958688
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 10223616,
+          "init" : 2555904,
+          "max" : 50331648,
+          "used" : 10033920
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 17039360,
+          "init" : 197787648,
+          "max" : 4193255424,
+          "used" : 0
+        }
+      } ],
+      "memoryUsageBeforeGc" : [ {
+        "key" : "PS Survivor Space",
+        "value" : {
+          "committed" : 524288,
+          "init" : 32964608,
+          "max" : 524288,
+          "used" : 425984
+        }
+      }, {
+        "key" : "PS Old Gen",
+        "value" : {
+          "committed" : 2000945152,
+          "init" : 527564800,
+          "max" : 8388608000,
+          "used" : 1680642280
+        }
+      }, {
+        "key" : "PS Perm Gen",
+        "value" : {
+          "committed" : 36306944,
+          "init" : 21757952,
+          "max" : 85983232,
+          "used" : 35958688
+        }
+      }, {
+        "key" : "Code Cache",
+        "value" : {
+          "committed" : 10223616,
+          "init" : 2555904,
+          "max" : 50331648,
+          "used" : 10033920
+        }
+      }, {
+        "key" : "PS Eden Space",
+        "value" : {
+          "committed" : 17039360,
+          "init" : 197787648,
+          "max" : 4193255424,
+          "used" : 17039360
+        }
+      } ],
+      "startTime" : 4819722974
+    },
+    "CollectionCount" : 1057986,
+    "CollectionTime" : 4918238,
+    "Name" : "PS Scavenge",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "PS Eden Space", "PS Survivor Space" ]
+  }, {
+    "name" : "java.lang:type=MemoryPool,name=PS Old Gen",
+    "modelerType" : "sun.management.MemoryPoolImpl",
+    "Name" : "PS Old Gen",
+    "Type" : "HEAP",
+    "Valid" : true,
+    "CollectionUsage" : {
+      "committed" : 2000945152,
+      "init" : 527564800,
+      "max" : 8388608000,
+      "used" : 1503640392
+    },
+    "CollectionUsageThreshold" : 0,
+    "CollectionUsageThresholdCount" : 0,
+    "MemoryManagerNames" : [ "PS MarkSweep" ],
+    "PeakUsage" : {
+      "committed" : 4455333888,
+      "init" : 527564800,
+      "max" : 8388608000,
+      "used" : 4453553384
+    },
+    "Usage" : {
+      "committed" : 2000945152,
+      "init" : 527564800,
+      "max" : 8388608000,
+      "used" : 1680642280
+    },
+    "UsageThreshold" : 0,
+    "UsageThresholdCount" : 0,
+    "CollectionUsageThresholdExceeded" : true,
+    "CollectionUsageThresholdSupported" : true,
+    "UsageThresholdExceeded" : true,
+    "UsageThresholdSupported" : true
+  }, {
+    "name" : "java.lang:type=MemoryManager,name=CodeCacheManager",
+    "modelerType" : "sun.management.MemoryManagerImpl",
+    "Name" : "CodeCacheManager",
+    "Valid" : true,
+    "MemoryPoolNames" : [ "Code Cache" ]
+  }, {
+    "name" : "JMImplementation:type=MBeanServerDelegate",
+    "modelerType" : "javax.management.MBeanServerDelegate",
+    "MBeanServerId" : "w301.test.yandex.net_1349962557924",
+    "SpecificationName" : "Java Management Extensions",
+    "SpecificationVersion" : "1.4",
+    "SpecificationVendor" : "Sun Microsystems",
+    "ImplementationName" : "JMX",
+    "ImplementationVersion" : "1.6.0_30-b12",
+    "ImplementationVendor" : "Sun Microsystems"
+  } ]
+}

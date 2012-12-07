@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import ConfigParser
+import StringIO
 import json
 import string
 import sys
@@ -186,6 +187,34 @@ class HBaseRegionServer(JmxParser):
 
                     yield 'hbase.regionserver.' + attr, tags, str(value)
 
+class JobTracker(JmxParser):
+
+    def get_metrics(self):
+        for bean in self.find_beans('hadoop', service='JobTracker', name='JobTrackerInfo'):
+            strio = StringIO.StringIO(bean.bean['SummaryJson'])
+            for attr, value in json.load(strio).iteritems():
+                if attr in ['nodes']:
+                    yield 'hadoop.jobtracker.nodes' + attr, {}, str(value)
+                elif attr in ['alive', 'blacklisted']:
+                    yield 'hadoop.jobtracker.nodes.active', {'state' : attr}, str(value)
+                elif attr == 'slots':
+                    for s, v in value.iteritems():
+                        if s.endswith('_used'):
+                            yield 'hadoop.jobtracker.slots.used',\
+                                {'type': s.split('_', 1)[0]}, str(v)
+                        else:
+                            yield 'hadoop.jobtracker.slots.total',\
+                                {'type': s.split('_', 1)[0]}, str(v)
+
+
+
+class TaskTracker(JmxParser):
+
+    def get_metrics(self):
+        for bean in self.find_beans('hadoop', service='TaskTracker', name='TaskTrackerInfo'):
+            strio = StringIO.StringIO(bean.bean['TasksInfoJson'])
+            for attr, value in json.load(strio).iteritems():
+                yield 'hadoop.tasktracker.tasks', {'state' : attr}, str(value)
 
 def format_tags(tags):
     return string.join(map(
@@ -212,7 +241,9 @@ def main(argv):
 
     for sec, clz in {'Namenode' : HDFSNameNode,
                      'Datanode' : HDFSDataNode,
-                     'HBaseRegionServer' : HBaseRegionServer
+                     'HBaseRegionServer' : HBaseRegionServer,
+                     'JobTracker' : JobTracker,
+                     'TaskTracker' : TaskTracker
     }.iteritems():
         if config.has_section(sec):
             print_metrics(config, ts, sec, clz)
