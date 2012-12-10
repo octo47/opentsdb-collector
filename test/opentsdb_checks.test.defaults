@@ -4,6 +4,8 @@ cachedir=/var/tmp/opentsdb_cache
 configdir=%(basedir)s
 checksdir=%(basedir)s/test
 timeout=30
+retention=1000
+max_chunks=1
 
 [Tags]
 host=%(hostname)s

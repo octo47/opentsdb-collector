@@ -2,6 +2,7 @@
 from logging.handlers import SysLogHandler
 from optparse import OptionParser
 import StringIO
+import re
 from string import rfind
 import ConfigParser
 import os
@@ -15,6 +16,7 @@ import logging
 import time
 import signal
 from itertools import ifilter
+import itertools
 
 
 READ_LINE_BUF = 1024
@@ -22,6 +24,8 @@ WRITE_BUF = 2 * 1024 * 1024
 
 MAIN_SECTION = "Main"
 TIMEOUT_KEY = "timeout"
+RETENTION_KEY = "retention"
+MAX_CHUNKS_KEY = "max_chunks"
 CHECKSDIR_KEY = "checksdir"
 CACHEDIR_KEY = "cachedir"
 CONFIGDIR_KEY = "configdir"
@@ -32,7 +36,7 @@ TAGS_SECTION = "Tags"
 LOG = logging.getLogger('opentsdb_checks')
 default_config = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])),
     'opentsdb_checks.defaults')
-timestamp = str(time.time())
+timestamp = time.time()
 hostname = socket.gethostname()
 
 
@@ -156,7 +160,7 @@ def call_checks(run_checks, config):
             uniq = random.randint(1, 10^20)
             try:
                 result = StringIO.StringIO(ch[i].communicate()[0])
-                file_name_target = get_cache_dir(config) + "/" + timestamp + "-" + str(uniq)
+                file_name_target = get_cache_dir(config) + "/" + str(timestamp) + "-" + str(uniq)
                 file_name_tmp = file_name_target + ".part"
                 try:
                     f = open(file_name_tmp, 'a')
@@ -188,17 +192,51 @@ def call_checks(run_checks, config):
                     continue
                 continue
 
+ts_part = re.compile('([0-9]+).')
+def remove_stale_chunk(cache_dir, fname, min_timestamp):
+    result = ts_part.match(fname)
+    if result:
+        file_ts = long(result.group(1))
+        if file_ts < min_timestamp:
+            LOG.debug("Removing stale chunk %s (%d < %d)" % (fname, file_ts, min_timestamp))
+            os.remove(cache_dir + os.path.sep + fname)
+            return None
+    return fname
+
+def cleanup_chunks(min_timestamp, cache_dir, chunks):
+    return itertools.ifilter(None,
+        itertools.imap(lambda fname: remove_stale_chunk(cache_dir, fname, min_timestamp), chunks))
+
+
+def remove_n_chunks(cache_dir, chunks, to_remove):
+    LOG.debug("Removing overflow %d chunks" % to_remove)
+    for chunk in chunks:
+        os.remove(cache_dir + os.path.sep + chunk)
+        LOG.debug("Removing overflow %s chunk (%d)" % (chunk, to_remove))
+        to_remove -= 1
+        if to_remove <= 0:
+            break
+
 
 def send_outstanding(config):
     timeout = config.getint(MAIN_SECTION, TIMEOUT_KEY)
+    max_chunks = config.getint(MAIN_SECTION, MAX_CHUNKS_KEY)
+    retention = config.getint(MAIN_SECTION, RETENTION_KEY)
     servers = get_servers(config)
     random.shuffle(servers)
     cache_dir = get_cache_dir(config)
-    chunks = sorted(os.listdir(cache_dir))
-    LOG.debug("Found chunks %s for %s" % (chunks, servers))
-    chunks = list(ifilter(lambda fname: rfind(fname, '.part') != 5, chunks))
+    listing = sorted(os.listdir(cache_dir))
+    chunks = ifilter(lambda fname: rfind(fname, '.part') != 5, listing)
+
+    to_remove = len(listing) - max_chunks
+    if to_remove > 0:
+        remove_n_chunks(cache_dir, chunks, to_remove)
+
+    chunks = list(cleanup_chunks(timestamp - retention, cache_dir, chunks))
     if not chunks or len(chunks) == 0:
+        LOG.debug("No chunks found for %s" % (servers))
         return
+    LOG.debug("Found chunks %s for %s" % (chunks, servers))
     LOG.debug("Sending %s to %s" % (chunks, servers))
     for server in servers:
         try:
@@ -208,7 +246,7 @@ def send_outstanding(config):
             try:
                 verify_conn(con)
                 for chunk in chunks:
-                    send_file(con, cache_dir + "/" + chunk)
+                    send_file(con, cache_dir + os.path.sep + chunk)
                     LOG.debug("Done %s to %s" % (chunk, server))
                 verify_conn(con)
 
