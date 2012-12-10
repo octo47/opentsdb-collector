@@ -248,7 +248,7 @@ def format_tags(tags):
 
 def print_metrics(config, ts, section, clz):
     metrics = list(clz(config.get(section, 'url'), config).get_metrics())
-    lines = map(lambda (metric, tags, value): "%s %s %d %s" % (metric, value, ts, format_tags(tags)), metrics)
+    lines = map(lambda (metric, tags, value): "%s %d %s %s" % (metric, ts, value, format_tags(tags)), metrics)
     lines.sort()
     for line in lines:
         print line
