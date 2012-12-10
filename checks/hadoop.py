@@ -264,14 +264,18 @@ def main(argv):
     config.read(confpath)
     ts = int(time.time())
 
-    for sec, clz in {'Namenode' : HDFSNameNode,
-                     'Datanode' : HDFSDataNode,
+    for sec, clz in {'NameNode' : HDFSNameNode,
+                     'DataNode' : HDFSDataNode,
                      'HBaseRegionServer' : HBaseRegionServer,
                      'JobTracker' : JobTracker,
                      'TaskTracker' : TaskTracker
     }.iteritems():
-        if config.has_section(sec):
-            print_metrics(config, ts, sec, clz)
+        try:
+            if config.has_section(sec):
+                print_metrics(config, ts, sec, clz)
+        except:
+            continue
+
 
 
 def get_or_default(config, section, key, default_value):
