@@ -242,6 +242,7 @@ def send_outstanding(config):
         try:
             con = mk_conn(server, timeout)
             if not con:
+                time.sleep(random.randint(0, 5)) # spread load
                 continue
             try:
                 verify_conn(con)
