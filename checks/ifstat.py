@@ -41,16 +41,16 @@ def main():
         f_netdev.seek(0)
         ts = int(time.time())
         for line in f_netdev:
-            m = re.match("\s+(eth\d+):(.*)", line)
+            m = re.match("\s*(?P<iface_name>(vlan|eth)\d+):(?P<data>.*)", line)
             if not m:
                 continue
-            stats = m.group(2).split(None)
+            stats = m.group('data').split(None)
             for i in range(8):
                 if FIELDS[i]:
                     print ("proc.net.%s %d %s iface=%s direction=in"
-                           % (FIELDS[i], ts, stats[i], m.group(1)))
+                           % (FIELDS[i], ts, stats[i], m.group('iface_name')))
                     print ("proc.net.%s %d %s iface=%s direction=out"
-                           % (FIELDS[i], ts, stats[i+8], m.group(1)))
+                           % (FIELDS[i], ts, stats[i+8], m.group('iface_name')))
 
         sys.stdout.flush()
 
